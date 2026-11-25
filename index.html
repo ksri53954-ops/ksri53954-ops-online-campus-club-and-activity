@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CampusConnect | Student Clubs & Activities</title>
+  <meta name="description" content="Discover campus clubs, attend events, and build your community.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="CampusConnect home">
+      <span class="brand-mark" aria-hidden="true"><span></span><span></span><span></span></span>
+      <span>Campus<span>Connect</span></span>
+    </a>
+    <nav class="nav-links" aria-label="Main navigation">
+      <a class="active" href="#discover">Discover</a>
+      <a href="#clubs">Clubs</a>
+      <a href="#events">Events</a>
+      <a href="#dashboard">Dashboard</a>
+    </nav>
+    <div class="header-actions">
+      <button class="icon-button" id="notificationBtn" aria-label="Notifications">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 7-3 9h18c0-2-3-2-3-9M10 21h4"/></svg>
+        <span class="notification-dot"></span>
+      </button>
+      <button class="profile-button" id="profileBtn" aria-label="Open profile">
+        <span class="avatar">AR</span>
+        <span class="profile-name">Alex Rivera</span>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m7 10 5 5 5-5"/></svg>
+      </button>
+      <button class="mobile-menu" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="discover">
+      <div class="hero-copy">
+        <p class="eyebrow"><span></span> Spring semester 2026</p>
+        <h1>Find your <em>community.</em></h1>
+        <p class="hero-subtitle">Discover clubs, meet people, and make campus feel like home.</p>
+        <div class="search-box">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></svg>
+          <input id="searchInput" type="search" placeholder="Search clubs or events..." aria-label="Search clubs or events">
+          <button id="searchBtn">Explore</button>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="orange-ring"></div>
+        <div class="photo-card card-one"><img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?auto=format&fit=crop&w=700&q=85" alt=""></div>
+        <div class="photo-card card-two"><img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=700&q=85" alt=""></div>
+        <div class="photo-card card-three"><img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=700&q=85" alt=""></div>
+        <div class="floating-label"><span>1,240</span><small>active students</small></div>
+      </div>
+    </section>
+
+    <section class="stats-strip">
+      <div><strong>48</strong><span>Active clubs</span></div>
+      <div><strong>126</strong><span>Events this month</span></div>
+      <div><strong>3,842</strong><span>Campus members</span></div>
+      <button id="createClubBtn" class="create-club"><span>+</span> Start a club</button>
+    </section>
+
+    <section class="section" id="clubs">
+      <div class="section-heading">
+        <div><p class="section-kicker">Explore</p><h2>Popular clubs</h2></div>
+        <button class="text-button" data-filter="all">View all <span>→</span></button>
+      </div>
+      <div class="club-grid" id="clubGrid">
+        <article class="club-card" data-category="Technology" data-name="Code Collective">
+          <div class="club-banner"><span class="club-icon code-icon">&lt;/&gt;</span><button class="heart" aria-label="Favorite Code Collective">♡</button></div>
+          <div class="club-body"><span class="category">Technology</span><h3>Code Collective</h3><p>Build projects, share ideas, and grow with fellow developers.</p><div class="club-footer"><div class="members"><span class="mini-avatar a1">JK</span><span class="mini-avatar a2">ML</span><span class="mini-avatar a3">+</span></div><span>284 members</span></div></div>
+        </article>
+        <article class="club-card" data-category="Arts & Culture" data-name="Campus Creatives">
+          <div class="club-banner art-banner"><span class="club-icon art-icon">✦</span><button class="heart" aria-label="Favorite Campus Creatives">♡</button></div>
+          <div class="club-body"><span class="category">Arts & Culture</span><h3>Campus Creatives</h3><p>A welcoming space for artists, designers, and storytellers.</p><div class="club-footer"><div class="members"><span class="mini-avatar b1">S</span><span class="mini-avatar b2">A</span><span class="mini-avatar b3">+</span></div><span>196 members</span></div></div>
+        </article>
+        <article class="club-card" data-category="Environment" data-name="Green Campus">
+          <div class="club-banner green-banner"><span class="club-icon green-icon">♻</span><button class="heart" aria-label="Favorite Green Campus">♡</button></div>
+          <div class="club-body"><span class="category">Environment</span><h3>Green Campus</h3><p>Creating a more sustainable future, one action at a time.</p><div class="club-footer"><div class="members"><span class="mini-avatar c1">T</span><span class="mini-avatar c2">R</span><span class="mini-avatar c3">+</span></div><span>153 members</span></div></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section events-section" id="events">
+      <div class="section-heading">
+        <div><p class="section-kicker">What's happening</p><h2>Upcoming events</h2></div>
+        <div class="event-controls"><button class="arrow-button" id="prevEvent" aria-label="Previous events">←</button><button class="arrow-button" id="nextEvent" aria-label="Next events">→</button></div>
+      </div>
+      <div class="event-list" id="eventList">
+        <article class="event-card" data-name="Spring Design Jam">
+          <div class="date-box"><strong>12</strong><span>APR</span></div>
+          <div class="event-info"><span class="event-tag">Workshop</span><h3>Spring Design Jam</h3><p><span>◷</span> 3:00 PM – 6:00 PM &nbsp; <span>⌖</span> Innovation Hub</p></div>
+          <div class="event-action"><div class="attendees"><span class="mini-avatar d1">N</span><span class="mini-avatar d2">L</span><span class="mini-avatar d3">+42</span></div><button class="rsvp-button">RSVP</button></div>
+        </article>
+        <article class="event-card" data-name="Community Garden Day">
+          <div class="date-box green-date"><strong>18</strong><span>APR</span></div>
+          <div class="event-info"><span class="event-tag green-tag">Outdoor</span><h3>Community Garden Day</h3><p><span>◷</span> 9:30 AM – 12:30 PM &nbsp; <span>⌖</span> East Campus Garden</p></div>
+          <div class="event-action"><div class="attendees"><span class="mini-avatar e1">M</span><span class="mini-avatar e2">C</span><span class="mini-avatar e3">+28</span></div><button class="rsvp-button">RSVP</button></div>
+        </article>
+        <article class="event-card" data-name="Open Mic Night">
+          <div class="date-box purple-date"><strong>24</strong><span>APR</span></div>
+          <div class="event-info"><span class="event-tag purple-tag">Social</span><h3>Open Mic Night</h3><p><span>◷</span> 7:00 PM – 9:30 PM &nbsp; <span>⌖</span> Student Union Theater</p></div>
+          <div class="event-action"><div class="attendees"><span class="mini-avatar f1">P</span><span class="mini-avatar f2">J</span><span class="mini-avatar f3">+67</span></div><button class="rsvp-button">RSVP</button></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="dashboard-preview" id="dashboard">
+      <div><p class="section-kicker">For club leaders</p><h2>Everything you need to bring people together.</h2></div>
+      <button class="admin-button" id="adminBtn">Open admin dashboard <span>→</span></button>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-backdrop"></div>
+    <div class="modal-panel">
+      <button class="modal-close" id="modalClose" aria-label="Close">×</button>
+      <p class="section-kicker">Create with CampusConnect</p>
+      <h2 id="modalTitle">Start a new club</h2>
+      <form id="clubForm">
+        <label>Club name<input name="name" required placeholder="e.g. Photography Society"></label>
+        <label>Category<select name="category"><option>Technology</option><option>Arts & Culture</option><option>Environment</option><option>Sports</option><option>Academic</option></select></label>
+        <label>Description<textarea name="description" required placeholder="Tell students what your club is about..."></textarea></label>
+        <button type="submit" class="submit-button">Submit for review</button>
+      </form>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status"></div>
+  <script src="script.js"></script>
+</body>
+</html>
